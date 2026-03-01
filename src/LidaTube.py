@@ -672,7 +672,7 @@ class DataHandler:
 
     def _get_album_links(self, req_album, artist, album_name, cleaned_artist, cleaned_album, query_text):
         try:
-            search_results = self.self.ytmusic.search(query=query_text, filter="albums", limit=10)
+            search_results = self.ytmusic.search(query=query_text, filter="albums", limit=10)
 
             self.general_logger.info(f'Searching for Whole Album: {req_album["artist"]} - {req_album["album_name"]}')
             album_match = _matcher.album_matcher(self.minimum_match_ratio, artist, album_name, cleaned_artist, cleaned_album, search_results)
